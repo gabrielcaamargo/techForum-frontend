@@ -1,6 +1,6 @@
 import Article from '../../components/Article';
 import { ArticleType } from '../../@types/ArticleType';
-import { ArticleContainer } from './styles';
+import { Container } from './styles';
 
 const ArticleList: ArticleType[] = [
   {
@@ -55,7 +55,7 @@ const ArticleList: ArticleType[] = [
 
 export default function Home() {
   return (
-    <ArticleContainer>
+    <Container>
       {ArticleList.map(article => (
         <Article
           key={article.id}
@@ -65,6 +65,6 @@ export default function Home() {
           id={article.id}
         />
       ))}
-    </ArticleContainer>
+    </Container>
   );
 }
