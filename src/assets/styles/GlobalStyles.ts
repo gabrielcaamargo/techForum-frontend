@@ -10,13 +10,11 @@ export default createGlobalStyle`
   body {
     font-size: 16px;
     font-family: 'Anybody', sans-serif;
+    background-color: ${({theme}) => theme.background}!important;
+    color: ${({theme}) => theme.textColor}!important;
   }
 
   button {
     cursor: pointer;
-  }
-
-  input {
-    font-size: 16px;
   }
 `;

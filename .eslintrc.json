@@ -22,6 +22,7 @@
     "rules": {
         "react/react-in-jsx-scope": "off",
         "@typescript-eslint/no-empty-interface": "off",
+        "react/no-children-prop": "off",
         "indent": [
             "error",
             2
