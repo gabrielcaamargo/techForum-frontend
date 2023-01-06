@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   display: grid;
-  /* justify-content: space-between; */
   align-items: center;
   grid-template-columns: 2fr 1fr;
   padding: 22px;
@@ -10,6 +9,7 @@ export const Container = styled.header`
 
   strong {
     font-size: 24px;
+    color: #F7F7F7;
     span {
       color: ${({theme}) => theme.blue.highlight};
     }
