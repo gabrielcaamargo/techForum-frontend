@@ -11,8 +11,12 @@ import lightTheme from '../../assets/styles/themes/lightTheme';
 import Header from '../Header';
 import Router from '../../Router';
 
+import { ArticleType } from '../../@types/ArticleType';
+import { ArticleContext } from '../../contexts/ArticleContext';
+
 export default function App() {
   const [theme, setTheme] = useState('dark');
+  const [articleList, setArticleTypeList] = useState<ArticleType[]>([]);
 
   return (
     <BrowserRouter>
@@ -21,7 +25,9 @@ export default function App() {
           <ChakraProvider>
             <GlobalStyles />
             <Header />
-            <Router />
+            <ArticleContext.Provider value={{ articleList, setArticleTypeList }}>
+              <Router />
+            </ArticleContext.Provider>
           </ChakraProvider>
         </ThemeProvider>
       </ThemeContext.Provider>
