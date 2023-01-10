@@ -9,12 +9,17 @@ export default createGlobalStyle`
 
   body {
     font-size: 16px;
-    font-family: 'Anybody', sans-serif;
-    background-color: ${({theme}) => theme.background}!important;
-    color: ${({theme}) => theme.textColor}!important;
+    font-family: 'Poppins', sans-serif;
+    background-color: ${({theme}) => theme.background};
+    color: ${({theme}) => theme.textColor};
+    padding: 0!important;
+    overflow-y: scroll!important;
   }
 
   button {
     cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
   }
 `;

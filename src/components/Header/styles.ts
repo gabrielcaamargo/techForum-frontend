@@ -32,14 +32,30 @@ export const HeaderActions = styled.div`
   width: 100%;
   justify-content: flex-end;
 
-  .chakra-input__group {
-    input {
-      border-width: 2px;
-      font-size: 16px;
-      &:focus {
-        border-color: ${({theme}) => theme.highlight}!important;
-        box-shadow: none;
-      }
+  #theme-menu {
+    transition: none;
+    &:hover {
+      background: none;
     }
+  }
+
+`;
+
+export const Input = styled.input`
+  padding: 6px 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #F5F5F5;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+  &::placeholder {
+    color: #F5F5F5;
+  }
+
+  &:focus {
+    border: 1px solid ${({theme}) => theme.highlight};
   }
 `;
