@@ -3,9 +3,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 
 import { Container, HeaderActions } from './styles';
 import { Input, InputGroup, InputRightElement } from '@chakra-ui/react';
-import { FiUser, FiSun } from 'react-icons/fi';
-import { RxMagnifyingGlass } from 'react-icons/rx';
-import { BsMoon } from 'react-icons/bs';
+import { MagnifyingGlass, Moon, SunDim, User } from 'phosphor-react';
 
 export default function Header() {
   const {theme, setTheme} = useContext(ThemeContext);
@@ -20,18 +18,20 @@ export default function Header() {
 
   return (
     <Container>
-      <strong><span>Tech</span>Forum</strong>
+      <div className="header">
+        <strong><span>Tech</span>Forum</strong>
 
-      <HeaderActions>
-        <InputGroup>
-          <Input placeholder='Search a topic' _placeholder={{ opacity: 1, color: '#F7F7F7' }}/>
-          <InputRightElement children={<RxMagnifyingGlass size={24} color="#70B5FF" /> }/>
-        </InputGroup>
-        <FiUser color='#FFF' size={32}/>
-        <button onClick={handleSwitchTheme}>
-          { theme === 'dark' ? <FiSun color='#FFF' size={24}/> : <BsMoon color='#FFF' size={24}/> }
-        </button>
-      </HeaderActions>
+        <HeaderActions>
+          <InputGroup>
+            <Input placeholder='Search a topic' _placeholder={{ opacity: 1, color: '#F5F5F5' }}/>
+            <InputRightElement children={<MagnifyingGlass size={24} color='#F5F5F5' /> }/>
+          </InputGroup>
+          <User color='#FFF' size={32}/>
+          <button onClick={handleSwitchTheme}>
+            { theme === 'dark' ? <SunDim color='#F5F5F5' size={24}/> : <Moon size={24} color='#F5F5F5' /> }
+          </button>
+        </HeaderActions>
+      </div>
     </Container>
   );
 }

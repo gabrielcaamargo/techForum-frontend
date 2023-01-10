@@ -4,17 +4,21 @@ import { ArticleType } from '../../@types/ArticleType';
 import { Container, ArticleLikes, ArticleHeader, ArticleContainer, ArticleFooter } from './styles';
 
 import { Badge } from '@chakra-ui/react';
-import { BiUpArrow } from 'react-icons/bi';
+import { CaretCircleUp } from 'phosphor-react';
+import { ThemeContext } from '../../contexts/ThemeContext';
+
 
 export default function Article({name, content, category, id}: ArticleType) {
-  const {articleList} = useContext(ArticleContext);
+  const { articleList } = useContext(ArticleContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <Container>
       <ArticleLikes>
         <button>
-          <BiUpArrow color='#FFF' size={32} fontWeight="bold"/>
+          <CaretCircleUp size={32} color={theme === 'dark' ? '#F5F5F5' : '#0A0A0A'}/>
         </button>
+        <strong>25</strong>
       </ArticleLikes>
 
       <ArticleContainer>

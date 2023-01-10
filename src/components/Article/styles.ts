@@ -5,17 +5,24 @@ export const Container = styled.div`
   max-width: 1024px;
   display: grid;
   grid-template-columns: 48px auto;
+
+  & + & {
+    margin-top: 24px;
+  }
 `;
 
 export const ArticleLikes = styled.div`
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   button {
     margin-top: 22px;
   }
 `;
 
 export const ArticleContainer = styled.div`
-  background-color: #414141;
+  background-color: transparent;
+  border: 1px solid ${({theme}) => theme.gray.main};
   padding: 22px;
   border-radius: 8px;
 `;
@@ -41,7 +48,7 @@ export const ArticleFooter = styled.footer`
     display: flex;
     align-items: center;
     &:last-of-type {
-      color: ${({theme}) => theme.blue.highlight};
+      color: ${({theme}) => theme.highlight};
       font-weight: bold;
 
       &::before {

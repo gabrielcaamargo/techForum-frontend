@@ -1,4 +1,14 @@
 export default {
+  gray:  {
+    lighter: '#DCDCDD',
+    light: '#C5C3C6',
+    main: '#6C7075',
+    dark: '#54575B',
+    darker: '#45474A'
+  },
+
+  highlight: '#DA6900',
+
   blue: {
     lighter: '#238AFF',
     light: '#0077FF',
