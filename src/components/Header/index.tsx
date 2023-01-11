@@ -40,7 +40,7 @@ export default function Header() {
     '& .MuiPaper-root': {
       borderRadius: 6,
       marginTop: '48px',
-      marginLeft: isMobile ? '12px' : '36px',
+      marginLeft: isMobile ? '12px' : '-36px',
       backgroundColor: '#45474A',
       minWidth: 180,
       color:
