@@ -2,8 +2,8 @@ import { useContext, useState } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
 
 import { Container, HeaderActions, Input } from './styles';
-import { Desktop, Moon, SunDim, User } from 'phosphor-react';
-import { styled, alpha } from '@mui/material/styles';
+import { Desktop, Moon, SunDim } from 'phosphor-react';
+import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Menu, { MenuProps } from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -80,8 +80,6 @@ export default function Header() {
       console.log(userSystemTheme.matches);
       handleClose();
     }
-
-
   }
 
   return (
@@ -91,7 +89,6 @@ export default function Header() {
 
         <HeaderActions>
           <Input type="text" placeholder='Search about a topic'/>
-          <User color='#FFF' size={32}/>
 
           <Button
             id="theme-menu"

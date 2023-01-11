@@ -38,28 +38,3 @@ export const ArticleHeader = styled.header`
   }
 `;
 
-export const ArticleFooter = styled.footer`
-  margin-top: 24px;
-  display: flex;
-  gap: 16px;
-
-  small {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    &:last-of-type {
-      color: ${({theme}) => theme.highlight};
-      font-weight: bold;
-
-      &::before {
-        display: inline-block;
-        content: '';
-        width: 5px;
-        height: 5px;
-        background-color: ${({theme}) => theme.textColor};
-        border-radius: 50%;
-        margin-right: 16px;
-      }
-    }
-  }
-`;

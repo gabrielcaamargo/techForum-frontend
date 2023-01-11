@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ArticleContext } from '../../contexts/ArticleContext';
 import { ArticleType } from '../../@types/ArticleType';
-import { Container, ArticleLikes, ArticleHeader, ArticleContainer, ArticleFooter } from './styles';
+import { Container, ArticleLikes, ArticleHeader, ArticleContainer } from './styles';
 
 import { CaretCircleUp } from 'phosphor-react';
 import { ThemeContext } from '../../contexts/ThemeContext';
@@ -26,11 +26,6 @@ export default function Article({name, content, category, id}: ArticleType) {
         </ArticleHeader>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consectetur ab unde rerum eius repellendus iste architecto sapiente a earum magnam cupiditate autem, fuga, id aliquid debitis cumque labore. Fuga nisi, autem, similique assumenda minima architecto explicabo inventore sapiente asperiores nulla dolorem consequuntur quidem provident!</p>
-
-        <ArticleFooter>
-          <small>Gabriel Camargo - 06/01/2022</small>
-          <small>Follow</small>
-        </ArticleFooter>
       </ArticleContainer>
     </Container>
   );
