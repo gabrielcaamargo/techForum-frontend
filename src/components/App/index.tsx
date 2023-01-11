@@ -12,6 +12,7 @@ import Router from '../../Router';
 
 import { ArticleType } from '../../@types/ArticleType';
 import { ArticleContext } from '../../contexts/ArticleContext';
+import Footer from '../Footer';
 
 export default function App() {
   const [theme, setTheme] = useState<string | null>(
@@ -28,6 +29,7 @@ export default function App() {
           <ArticleContext.Provider value={{ articleList, setArticleTypeList }}>
             <Router />
           </ArticleContext.Provider>
+          <Footer />
         </ThemeProvider>
       </ThemeContext.Provider>
     </BrowserRouter>
