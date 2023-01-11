@@ -31,5 +31,5 @@ Following these steps below, the project will be running on your computer quickl
 
   # [OPTIONAL] The project will be allocated on port 5173. If you want to change this port, use this
   $ yarn dev --port [desired port]
-  # e.g $yarn dev --port 3000
+  # e.g $ yarn dev --port 3000
  ```
