@@ -5,7 +5,14 @@ export const Container = styled.header`
     display: grid;
     align-items: center;
     grid-template-columns: 2fr 1fr;
+
+    @media screen and (max-width: 640px) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
+
   height: 360px;
 
   padding: 22px;
@@ -13,7 +20,6 @@ export const Container = styled.header`
   background-image: url("src/assets/images/banner.jpg");
   background-position: center;
   background-size: cover;
-  background-origin: content-box;
 
   strong {
     font-size: 24px;
@@ -22,6 +28,10 @@ export const Container = styled.header`
     span {
       color: ${({theme}) => theme.highlight};
     }
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 16px 8px;
   }
 `;
 
@@ -38,6 +48,12 @@ export const HeaderActions = styled.div`
     }
   }
 
+  @media screen and (max-width: 640px) {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
 `;
 
 export const Input = styled.input`
@@ -50,6 +66,7 @@ export const Input = styled.input`
   color: #F5F5F5;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(5px);
+
   &::placeholder {
     color: #F5F5F5;
   }
@@ -57,4 +74,10 @@ export const Input = styled.input`
   &:focus {
     border: 1px solid ${({theme}) => theme.highlight};
   }
+
+  @media screen and (max-width: 640px) {
+      position: absolute;
+      margin-top: 124px;
+      width: calc(100% - 16px);
+    }
 `;
