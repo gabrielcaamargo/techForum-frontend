@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: grid;
   max-width: 1440px;
   grid-template-columns: 304px auto;
-  margin: 72px auto 0;
+  margin: 72px auto;
 `;
 
 export const ArticleContainer = styled.div`
@@ -16,23 +16,4 @@ export const ArticleContainer = styled.div`
   justify-content: center;
 `;
 
-export const TopUsers = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid ${({theme}) => theme.gray.main};
-  width: 100%;
-  border-radius: 8px;
-  padding: 22px;
-  height: 780px;
 
-  h3 {
-    font-size: 20px;
-    font-weight: 700;
-    font-family: 'Anybody', sans-serif;
-
-    span {
-      color: ${({theme}) => theme.highlight};
-    }
-  }
-`;

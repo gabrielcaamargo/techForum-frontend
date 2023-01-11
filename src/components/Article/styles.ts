@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface CategoryProps {
+  categoryColor: string;
+}
+
 export const Container = styled.div`
   width: 100%;
   max-width: 1024px;
@@ -38,3 +42,28 @@ export const ArticleHeader = styled.header`
   }
 `;
 
+export const ArticleFooter = styled.footer`
+  margin-top: 24px;
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  small {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: ${({theme}) => theme.highlight};
+  }
+`;
+
+export const Category = styled.div<CategoryProps>`
+  padding: 0 4px;
+  border-radius: 4px;
+  background-color: ${({categoryColor}) => categoryColor};
+  color: #FFF;
+  small {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Anybody", sans-serif;
+  }
+`;

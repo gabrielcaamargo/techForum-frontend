@@ -28,7 +28,6 @@ export const Container = styled.header`
 export const HeaderActions = styled.div`
   display: flex;
   align-items: center;
-  gap: 24px;
   width: 100%;
   justify-content: flex-end;
 
