@@ -30,6 +30,10 @@ export default function TopUserList() {
           <small>78 interactions this month</small>
         </User>
 
+        <User actualTheme={theme}>
+          <p>Steve Jobs</p>
+          <small>48 interactions this month</small>
+        </User>
       </UserList>
     </Container>
   );

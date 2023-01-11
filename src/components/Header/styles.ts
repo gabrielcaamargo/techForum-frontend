@@ -6,7 +6,7 @@ export const Container = styled.header`
     align-items: center;
     grid-template-columns: 2fr 1fr;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 768px) {
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -30,7 +30,7 @@ export const Container = styled.header`
     }
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 768px) {
     padding: 16px 8px;
   }
 `;
@@ -48,7 +48,7 @@ export const HeaderActions = styled.div`
     }
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
     align-items: flex-end;
     justify-content: center;
@@ -75,7 +75,7 @@ export const Input = styled.input`
     border: 1px solid ${({theme}) => theme.highlight};
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 768px) {
       position: absolute;
       margin-top: 124px;
       width: calc(100% - 16px);

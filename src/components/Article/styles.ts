@@ -10,8 +10,8 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 48px auto;
 
-  & + & {
-    margin-top: 24px;
+  @media screen and (max-width: 768px) {
+    display: flex;
   }
 `;
 
@@ -40,6 +40,14 @@ export const ArticleHeader = styled.header`
   strong {
     font-size: 24px;
   }
+
+  @media screen and (max-width: 768px) {
+    line-height: 1.1;
+
+    strong {
+      font-size: 20px;
+    }
+  }
 `;
 
 export const ArticleFooter = styled.footer`
@@ -47,11 +55,24 @@ export const ArticleFooter = styled.footer`
   display: flex;
   gap: 4px;
   font-size: 14px;
-  small {
+  justify-content: space-between;
+
+  .author {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    small {
     font-size: 14px;
     display: flex;
     align-items: center;
     color: ${({theme}) => theme.highlight};
+  }
+  }
+
+  .likes {
+    align-items: center;
+    display: flex;
+    gap: 8px;
   }
 `;
 
@@ -60,6 +81,8 @@ export const Category = styled.div<CategoryProps>`
   border-radius: 4px;
   background-color: ${({categoryColor}) => categoryColor};
   color: #FFF;
+  white-space: nowrap;
+
   small {
     font-size: 12px;
     text-transform: uppercase;

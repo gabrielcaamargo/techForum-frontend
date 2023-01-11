@@ -23,6 +23,10 @@ export const Container = styled.div`
       color: ${({theme}) => theme.highlight};
     }
   }
+
+  @media screen and (max-width: 768px) {
+    height: fit-content;
+  }
 `;
 
 export const UserList = styled.div`
@@ -37,7 +41,7 @@ export const User = styled.div<UserProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: ${({theme, actualTheme}) => actualTheme === 'dark' ? theme.gray.dark : theme.gray.lighter};
+  background-color: ${({theme, actualTheme}) => actualTheme === 'dark' ? theme.gray.darker : theme.gray.lighter};
   padding: 8px;
   border-radius: 4px;
 

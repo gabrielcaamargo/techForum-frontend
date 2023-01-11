@@ -7,6 +7,7 @@ import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Menu, { MenuProps } from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { isMobile } from '../../utils/isMobile';
 
 export default function Header() {
   const {theme, setTheme} = useContext(ThemeContext);
@@ -39,7 +40,7 @@ export default function Header() {
     '& .MuiPaper-root': {
       borderRadius: 6,
       marginTop: '48px',
-      marginLeft: '-36px',
+      marginLeft: isMobile ? '12px' : '36px',
       backgroundColor: '#45474A',
       minWidth: 180,
       color:
