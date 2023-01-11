@@ -82,11 +82,18 @@ export const Category = styled.div<CategoryProps>`
   background-color: ${({categoryColor}) => categoryColor};
   color: #FFF;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   small {
     font-size: 12px;
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Anybody", sans-serif;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 4px
   }
 `;
