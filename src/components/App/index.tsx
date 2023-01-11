@@ -14,7 +14,9 @@ import { ArticleType } from '../../@types/ArticleType';
 import { ArticleContext } from '../../contexts/ArticleContext';
 
 export default function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState<string | null>(
+    localStorage.getItem('theme')
+  );
   const [articleList, setArticleTypeList] = useState<ArticleType[]>([]);
 
   return (

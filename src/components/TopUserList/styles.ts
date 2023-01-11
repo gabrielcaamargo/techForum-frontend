@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface UserProps {
-  actualTheme: string;
+  actualTheme: string | null;
 }
 
 export const Container = styled.div`

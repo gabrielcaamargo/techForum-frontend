@@ -67,17 +67,19 @@ export default function Header() {
     switch(theme) {
     case 'dark':
       setTheme('dark');
+      localStorage.setItem('theme', theme);
       handleClose();
       break;
 
     case 'light':
       setTheme('light');
+      localStorage.setItem('theme', theme);
       handleClose();
       break;
 
     case 'system':
       userSystemTheme.matches ? setTheme('dark') : setTheme('light');
-      console.log(userSystemTheme.matches);
+      localStorage.setItem('theme', theme);
       handleClose();
     }
   }

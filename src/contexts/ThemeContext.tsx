@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 
 interface ThemeContextInterface {
-  theme: string;
+  theme: string | null;
   setTheme: (setState: 'dark' | 'light') => void;
 }
 
