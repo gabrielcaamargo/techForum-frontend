@@ -77,7 +77,7 @@ export const ArticleFooter = styled.footer`
 `;
 
 export const Category = styled.div<CategoryProps>`
-  padding: 0 4px;
+  padding: 4px;
   border-radius: 4px;
   background-color: ${({categoryColor}) => categoryColor};
   color: #FFF;
@@ -91,9 +91,5 @@ export const Category = styled.div<CategoryProps>`
     text-transform: uppercase;
     font-weight: bold;
     font-family: "Anybody", sans-serif;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 4px
   }
 `;
